@@ -22,12 +22,12 @@ public class TodoController {
         List<Todo> todos = todoService.getTodos();
         return new ResponseEntity<>(todos, HttpStatus.OK);
     }
-    //The function receives a GET request, processes it, and gives back a list of Todo as a response.
+ 
     @GetMapping({"/{todoId}"})
     public ResponseEntity<Todo> getTodo(@PathVariable Long todoId) {
         return new ResponseEntity<>(todoService.getTodoById(todoId), HttpStatus.OK);
     }
-    //The function receives a POST request, processes it, creates a new Todo and saves it to the database, and returns a resource link to the created todo.           @PostMapping
+    @PostMapping
     public ResponseEntity<Todo> saveTodo(@RequestBody Todo todo) {
         Todo todo1 = todoService.insert(todo);
         HttpHeaders httpHeaders = new HttpHeaders();
