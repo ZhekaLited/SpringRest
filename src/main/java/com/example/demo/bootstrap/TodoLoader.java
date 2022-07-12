@@ -32,7 +32,7 @@ public class TodoLoader implements CommandLineRunner {
                     Todo.builder()
                             .title("Go to school")
                             .description("Complete assignments")
-                            .todoStatus(TodoStatus.NOT_COMPLETED)
+                            .todoStatus(TodoStatus.COMPLETED)
                             .build()
             );
             System.out.println("Sample Todos Loaded");
